@@ -46,11 +46,11 @@ export default function AboutSection() {
   return (
     <section
       id="tentang"
-      className="bg-white py-20 lg:py-28"
+      className="bg-white py-16 lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
 
-        <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
 
           {/* =========================
               LEFT - ILLUSTRATION
@@ -80,7 +80,7 @@ export default function AboutSection() {
                   z-10
                   h-auto
                   w-full
-                  max-w-[470px]
+                  max-w-[500px]
                 "
               />
 
@@ -118,7 +118,7 @@ export default function AboutSection() {
                 leading-[1.08]
                 tracking-tight
                 text-gray-900
-                sm:text-5xl
+                sm:text-[48px]
               "
             >
               Mengenal{' '}
@@ -132,8 +132,8 @@ export default function AboutSection() {
             {/* DESCRIPTION */}
             <div
               className="
-                mt-6
-                max-w-[590px]
+                mt-5
+                max-w-[600px]
                 space-y-3
                 text-sm
                 leading-7
@@ -156,7 +156,7 @@ export default function AboutSection() {
             </div>
 
 {/* FEATURES */}
-<div className="mt-8 grid max-w-[600px] grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3">
+<div className="mt-7 grid max-w-[620px] grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3">
   {features.map((feature) => {
     const Icon = feature.icon
 
@@ -204,7 +204,7 @@ export default function AboutSection() {
               href="/sejarah"
               className="
                 group
-                mt-8
+                mt-7
                 inline-flex
                 items-center
                 gap-2.5

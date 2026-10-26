@@ -57,11 +57,11 @@ export default function MapSection() {
   }, [])
 
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
 
         {/* Heading */}
-        <div className="mb-10">
+        <div className="mb-8">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-10 bg-[#5968F2]" />
 
@@ -85,7 +85,7 @@ export default function MapSection() {
         </div>
 
         {/* Map */}
-        <div className="relative h-[520px] overflow-hidden rounded-[30px] border border-gray-100 shadow-sm lg:h-[650px]">
+        <div className="relative h-[500px] overflow-hidden rounded-[30px] border border-gray-100 shadow-sm lg:h-[570px]">
 
           {loading ? (
             <div className="flex h-full items-center justify-center bg-gray-100">

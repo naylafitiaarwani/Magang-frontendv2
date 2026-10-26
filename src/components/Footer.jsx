@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#080A28] text-white">
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-14 lg:py-16">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9 lg:gap-14">
 
           {/* TENTANG */}
           <div>
@@ -87,7 +87,7 @@ export default function Footer() {
 
 
         {/* COPYRIGHT */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-7 border-t border-white/10">
 
           <p className="text-sm text-gray-300">
             © 2025 Indramayu Eksplor. Semua hak dilindungi.

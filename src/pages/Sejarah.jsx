@@ -167,7 +167,7 @@ export default function Sejarah() {
           HERO
       ====================================================== */}
 
-      <section className="relative overflow-hidden bg-slate-900 pb-28 pt-20 text-white">
+      <section className="relative overflow-hidden bg-slate-900 pb-24 pt-16 text-white">
 
         {/* Decorative glow */}
 
@@ -178,19 +178,6 @@ export default function Sejarah() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
 
           <div className="max-w-3xl">
-
-            {/* Label */}
-
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-3.5 py-1 text-xs font-medium text-slate-300">
-
-              <Landmark className="h-3.5 w-3.5 text-amber-400" />
-
-              <span>
-                Warisan & Kronik Daerah
-              </span>
-
-            </div>
-
 
             {/* Heading */}
 
@@ -231,43 +218,12 @@ export default function Sejarah() {
 
         <div className="flex flex-col gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-xl shadow-slate-900/5 sm:flex-row sm:items-center sm:justify-between">
 
-          {/* CATEGORY */}
 
-          <div className="flex flex-wrap items-center gap-1.5">
-
-            {kategoriList.map((kategori) => (
-
-              <button
-                key={kategori}
-                type="button"
-                onClick={() =>
-                  handleKategori(kategori)
-                }
-                className={`
-                  rounded-xl
-                  px-4
-                  py-2
-                  text-xs
-                  font-semibold
-                  transition-all
-                  ${
-                    selectedKategori === kategori
-                      ? 'bg-slate-900 text-white shadow-sm'
-                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                  }
-                `}
-              >
-                {kategori}
-              </button>
-
-            ))}
-
-          </div>
 
 
           {/* SEARCH */}
 
-          <div className="relative sm:w-72">
+          <div className="relative sm:w-150">
 
             <Search
               className="
@@ -315,194 +271,172 @@ export default function Sejarah() {
           CONTENT
       ====================================================== */}
 
-      <section className="px-6 py-16 md:py-20">
-
+      <section className="px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <div className="mx-auto max-w-7xl">
-
-          {/* HEADER */}
-
-          <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-
+          <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-
-              <h2 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#3542A5]">
+                Koleksi Sejarah
+              </p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 Cerita di Balik Indramayu
               </h2>
-
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-500">
-                Mengenal berbagai cerita, tempat,
-                tokoh, dan warisan sejarah yang
-                menjadi bagian dari Indramayu.
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-500">
+                Mengenal cerita, tempat, tokoh, dan warisan sejarah yang menjadi bagian
+                dari perjalanan Indramayu.
               </p>
-
             </div>
-
-
-            {/* TOTAL */}
 
             {!loading && pagination && (
-
-              <p className="text-xs text-gray-500">
-
-                Menampilkan{' '}
-
-                <span className="font-semibold text-gray-700">
-                  {pagination.from || 0}
-                </span>
-
-                {' - '}
-
-                <span className="font-semibold text-gray-700">
-                  {pagination.to || 0}
-                </span>
-
-                {' dari '}
-
-                <span className="font-semibold text-gray-700">
+              <p className="text-xs text-slate-500">
+                Menampilkan{" "}
+                <span className="font-semibold text-slate-700">
+                  {pagination.from || 0} - {pagination.to || 0}
+                </span>{" "}
+                dari{" "}
+                <span className="font-semibold text-slate-700">
                   {pagination.total || 0}
-                </span>
-
-                {' cerita'}
-
+                </span>{" "}
+                cerita
               </p>
-
             )}
-
           </div>
 
-
-          {/* ==================================================
-              LOADING
-          ================================================== */}
-
           {loading && (
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(
-                (item) => (
-
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
+              <div className="space-y-5">
+                {[1, 2, 3, 4].map((item) => (
                   <div
                     key={item}
-                    className="
-                      h-[480px]
-                      animate-pulse
-                      overflow-hidden
-                      rounded-[28px]
-                      border-[8px]
-                      border-white
-                      bg-white
-                      shadow-sm
-                    "
+                    className="grid min-h-[250px] animate-pulse overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm sm:grid-cols-[256px_1fr]"
                   >
-
-                    <div className="h-[250px] bg-gray-200" />
-
-                    <div className="space-y-4 px-4 pt-5">
-
-                      <div className="h-6 w-3/4 rounded bg-gray-200" />
-
-                      <div className="h-4 w-1/2 rounded bg-gray-200" />
-
-                      <div className="h-8 w-full rounded bg-gray-200" />
-
-                      <div className="h-10 w-full rounded-full bg-gray-200" />
-
+                    <div className="h-56 bg-slate-200 sm:h-full" />
+                    <div className="space-y-4 p-6">
+                      <div className="h-5 w-24 rounded bg-slate-200" />
+                      <div className="h-7 w-4/5 rounded bg-slate-200" />
+                      <div className="h-4 w-full rounded bg-slate-200" />
+                      <div className="h-4 w-3/4 rounded bg-slate-200" />
+                      <div className="h-9 w-36 rounded bg-slate-200" />
                     </div>
-
                   </div>
-
-                )
-              )}
-
+                ))}
+              </div>
+              <div className="hidden space-y-4 lg:block">
+                <div className="h-40 rounded-2xl bg-slate-200" />
+                <div className="h-72 rounded-2xl bg-slate-200" />
+              </div>
             </div>
-
           )}
-
-
-          {/* ==================================================
-              ERROR
-          ================================================== */}
 
           {!loading && error && (
-
-            <div className="rounded-3xl bg-white p-10 text-center shadow-sm">
-
-              <BookOpen className="mx-auto mb-3 h-9 w-9 text-gray-400" />
-
-              <p className="text-sm text-gray-500">
-                {error}
-              </p>
-
+            <div className="rounded-2xl border border-slate-100 bg-white p-10 text-center shadow-sm">
+              <BookOpen className="mx-auto mb-3 h-9 w-9 text-slate-400" />
+              <p className="text-sm text-slate-500">{error}</p>
             </div>
-
           )}
 
+          {!loading && !error && sejarah.length === 0 && (
+            <div className="rounded-2xl border border-slate-100 bg-white p-12 text-center shadow-sm">
+              <BookOpen className="mx-auto mb-3 h-9 w-9 text-slate-400" />
+              <p className="text-sm text-slate-500">
+                Belum ada data sejarah yang sesuai dengan pencarian.
+              </p>
+            </div>
+          )}
 
-          {/* ==================================================
-              EMPTY
-          ================================================== */}
-
-          {!loading &&
-            !error &&
-            sejarah.length === 0 && (
-
-              <div className="rounded-3xl border border-gray-100 bg-white p-12 text-center shadow-sm">
-
-                <BookOpen className="mx-auto mb-3 h-9 w-9 text-gray-400" />
-
-                <p className="text-sm text-gray-500">
-                  Belum ada data sejarah yang
-                  sesuai dengan pencarian.
-                </p>
-
-              </div>
-
-            )}
-
-
-          {/* ==================================================
-              3 COLUMN CARD
-          ================================================== */}
-
-          {!loading &&
-            !error &&
-            sejarah.length > 0 && (
-
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
+          {!loading && !error && sejarah.length > 0 && (
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
+              <div className="grid gap-5 sm:grid-cols-2">
                 {sejarah.map((item) => (
-
                   <SejarahCard
                     key={item.id}
                     item={item}
+                    /* Pilihan style:
+                       horizontal | featured | compact | overlay */
+                    variant="horizontal"
                   />
-
                 ))}
-
               </div>
 
-            )}
+              <aside className="space-y-5 lg:sticky lg:top-6">
+                <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-[#3542A5]">
+                      <Landmark size={15} />
+                    </div>
+                    <h3 className="text-sm font-bold text-slate-900">
+                      Kategori
+                    </h3>
+                  </div>
 
+                  <div className="space-y-1">
+                    {kategoriList.map((kategori) => {
+                      const active = selectedKategori === kategori
 
-          {/* ==================================================
-              PAGINATION
-          ================================================== */}
+                      return (
+                        <button
+                          key={kategori}
+                          type="button"
+                          onClick={() => handleKategori(kategori)}
+                          className={`flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-xs transition ${
+                            active
+                              ? "bg-indigo-50 font-semibold text-[#3542A5]"
+                              : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                          }`}
+                        >
+                          <span className="flex items-center gap-2">
+                            <span
+                              className={`h-1.5 w-1.5 rounded-full ${
+                                active ? "bg-[#3542A5]" : "bg-slate-300"
+                              }`}
+                            />
+                            {kategori}
+                          </span>
+
+                          {active && (
+                            <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-bold text-[#3542A5]">
+                              Aktif
+                            </span>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#3542A5]">
+                        Pilihan
+                      </p>
+                      <h3 className="mt-1 text-sm font-bold text-slate-900">
+                        Cerita lainnya
+                      </h3>
+                    </div>
+                    <BookOpen size={16} className="text-slate-300" />
+                  </div>
+
+                  <div className="space-y-4">
+                    {sejarah.slice(0, 4).map((item) => (
+                      <SidebarHistoryCard key={`side-${item.id}`} item={item} />
+                    ))}
+                  </div>
+                </div>
+              </aside>
+            </div>
+          )}
 
           {!loading &&
             !error &&
             pagination &&
             pagination.last_page > 1 && (
-
               <Pagination
                 pagination={pagination}
                 onPageChange={handlePageChange}
               />
-
             )}
-
         </div>
-
       </section>
 
 
@@ -515,25 +449,13 @@ export default function Sejarah() {
 
 /* ============================================================
    SEJARAH CARD
-   STYLE CARD YANG KAMU SUKA
+   Redesain: kartu bergaya "arsip koleksi" — nomor akses,
+   label kategori seperti stempel, judul serif, dan garis
+   aksen yang muncul saat hover.
 ============================================================ */
 
-function SejarahCard({ item }) {
-
+function SejarahCard({ item, variant = "horizontal" }) {
   const [currentImage, setCurrentImage] = useState(0)
-
-  /*
-   * Support dua format gambar:
-   *
-   * gambar: "sejarah/gambar.jpg"
-   *
-   * atau:
-   *
-   * gambar: [
-   *   "sejarah/gambar1.jpg",
-   *   "sejarah/gambar2.jpg"
-   * ]
-   */
 
   const images = Array.isArray(item.gambar)
     ? item.gambar
@@ -541,347 +463,177 @@ function SejarahCard({ item }) {
       ? [item.gambar]
       : []
 
-
   const imageUrl =
     images.length > 0
       ? `${LARAVEL_URL}/storage/${images[currentImage]}`
       : null
 
-
-  /*
-   * ==========================================================
-   * NEXT IMAGE
-   * ==========================================================
-   */
-
   const nextImage = () => {
-
     if (images.length <= 1) return
-
     setCurrentImage((prev) =>
-      prev === images.length - 1
-        ? 0
-        : prev + 1
+      prev === images.length - 1 ? 0 : prev + 1
     )
-
   }
-
-
-  /*
-   * ==========================================================
-   * PREVIOUS IMAGE
-   * ==========================================================
-   */
 
   const previousImage = () => {
-
     if (images.length <= 1) return
-
     setCurrentImage((prev) =>
-      prev === 0
-        ? images.length - 1
-        : prev - 1
+      prev === 0 ? images.length - 1 : prev - 1
     )
-
   }
 
+  const imageControls = (
+    <>
+      {images.length > 1 && (
+        <>
+          <button
+            type="button"
+            onClick={previousImage}
+            aria-label="Gambar sebelumnya"
+            className="absolute left-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/25 text-white opacity-0 backdrop-blur transition group-hover:opacity-100 hover:bg-black/45"
+          >
+            <ChevronLeft size={15} />
+          </button>
+
+          <button
+            type="button"
+            onClick={nextImage}
+            aria-label="Gambar berikutnya"
+            className="absolute right-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/25 text-white opacity-0 backdrop-blur transition group-hover:opacity-100 hover:bg-black/45"
+          >
+            <ChevronRight size={15} />
+          </button>
+
+          <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-1 rounded-full bg-black/25 px-2 py-1 backdrop-blur">
+            {images.map((_, imgIndex) => (
+              <button
+                key={imgIndex}
+                type="button"
+                onClick={() => setCurrentImage(imgIndex)}
+                aria-label={`Gambar ${imgIndex + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  imgIndex === currentImage
+                    ? "w-4 bg-white"
+                    : "w-1.5 bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  )
 
   return (
+    <article className="group relative flex flex-col overflow-hidden rounded-lg border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]">
 
-    <article
-      className="
-        group
-        h-[480px]
-        overflow-hidden
-        rounded-[28px]
-        border-[8px]
-        border-white
-        bg-white
-        shadow-[0_10px_35px_rgba(0,0,0,0.08)]
-        ring-1
-        ring-gray-100
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-[0_18px_45px_rgba(0,0,0,0.12)]
-      "
-    >
+      {/* Aksen atas: muncul saat hover, menandai entri aktif */}
+      <div className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#3542A5] transition-transform duration-300 group-hover:scale-x-100" />
 
-      {/* ======================================================
-          IMAGE
-      ====================================================== */}
-
-      <div className="relative h-[250px] overflow-hidden rounded-[20px] bg-gray-100">
-
+      {/* GAMBAR */}
+      <div className="relative h-56 w-full shrink-0 overflow-hidden bg-slate-100">
         {imageUrl ? (
-
           <img
             src={imageUrl}
             alt={item.judul}
-            className="
-              h-full
-              w-full
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-105
-            "
+            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
           />
-
         ) : (
-
-          <div className="flex h-full items-center justify-center text-xs text-gray-400">
-
+          <div className="flex h-full items-center justify-center text-xs text-slate-400">
             Tidak ada gambar
-
           </div>
-
         )}
 
-
-        {/* ==================================================
-            CATEGORY
-        ================================================== */}
-
+        {/* Label kategori bergaya stempel arsip, menyatu di sudut */}
         {item.kategori && (
-
-          <span
-            className="
-              absolute
-              left-3.5
-              top-3.5
-              rounded-full
-              border
-              border-white/30
-              bg-white/80
-              px-3
-              py-1
-              text-xs
-              font-medium
-              text-gray-700
-              backdrop-blur-md
-            "
-          >
-
+          <span className="absolute left-0 top-4 z-10 rounded-r-full bg-slate-900/85 py-1.5 pl-3 pr-4 text-[10px] font-semibold text-white backdrop-blur">
             {item.kategori}
-
           </span>
-
         )}
 
-
-        {/* ==================================================
-            IMAGE ARROWS
-        ================================================== */}
-
-        {images.length > 1 && (
-
-          <>
-
-            <button
-              type="button"
-              onClick={previousImage}
-              aria-label="Gambar sebelumnya"
-              className="
-                absolute
-                left-2.5
-                top-1/2
-                z-20
-                flex
-                h-8
-                w-8
-                -translate-y-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/40
-                bg-black/20
-                text-white
-                backdrop-blur-md
-                transition
-                hover:bg-black/40
-              "
-            >
-
-              <ChevronLeft size={16} />
-
-            </button>
-
-
-            <button
-              type="button"
-              onClick={nextImage}
-              aria-label="Gambar berikutnya"
-              className="
-                absolute
-                right-2.5
-                top-1/2
-                z-20
-                flex
-                h-8
-                w-8
-                -translate-y-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/40
-                bg-black/20
-                text-white
-                backdrop-blur-md
-                transition
-                hover:bg-black/40
-              "
-            >
-
-              <ChevronRight size={16} />
-
-            </button>
-
-          </>
-
-        )}
-
-
-        {/* ==================================================
-            IMAGE DOTS
-        ================================================== */}
-
-        {images.length > 1 && (
-
-          <div
-            className="
-              absolute
-              bottom-3
-              left-1/2
-              z-20
-              flex
-              -translate-x-1/2
-              items-center
-              gap-1.5
-              rounded-full
-              bg-black/30
-              px-2.5
-              py-1
-              backdrop-blur-md
-            "
-          >
-
-            {images.map((_, index) => (
-
-              <button
-                key={index}
-                type="button"
-                onClick={() =>
-                  setCurrentImage(index)
-                }
-                aria-label={`Gambar ${index + 1}`}
-                className={`
-                  h-1.5
-                  rounded-full
-                  transition-all
-                  duration-300
-                  ${
-                    index === currentImage
-                      ? 'w-4 bg-white'
-                      : 'w-1.5 bg-white/70'
-                  }
-                `}
-              />
-
-            ))}
-
-          </div>
-
-        )}
-
+        {imageControls}
       </div>
 
-
-      {/* ======================================================
-          CARD CONTENT
-      ====================================================== */}
-
-      <div className="flex h-[214px] flex-col px-4 pb-2 pt-4">
-
-        <h3 className="line-clamp-2 text-lg font-bold leading-snug text-gray-900">
-
-          {item.judul}
-
-        </h3>
-
-
-        {/* LOCATION */}
-
-        {item.lokasi && (
-
-          <div className="mt-2 flex items-center gap-1.5 text-xs text-gray-500">
-
-            <MapPin size={14} />
-
-            <span>
-              {item.lokasi}
+      {/* KONTEN */}
+      <div className="flex min-w-0 flex-1 flex-col justify-between p-5">
+        <div>
+          <div className="mb-2.5 flex items-baseline gap-3 border-b border-dashed border-slate-200 pb-2.5">
+            <span className="text-[11px] text-slate-400">
+              Arsip Sejarah Indramayu
             </span>
-
           </div>
 
-        )}
+          <h3 className="font-serif line-clamp-2 text-xl font-semibold leading-snug text-slate-900 sm:text-[22px]">
+            {item.judul}
+          </h3>
 
+          {item.lokasi && (
+            <div className="mt-2.5 flex items-center gap-1.5 text-xs text-slate-500">
+              <MapPin size={13} className="shrink-0 text-[#3542A5]" />
+              <span className="line-clamp-1">{item.lokasi}</span>
+            </div>
+          )}
 
-        {/* DESCRIPTION */}
-
-        {item.deskripsi && (
-
-          <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-gray-600">
-
-            {item.deskripsi}
-
-          </p>
-
-        )}
-
-
-        {/* BUTTON */}
+          {item.deskripsi && (
+            <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-500">
+              {item.deskripsi}
+            </p>
+          )}
+        </div>
 
         <Link
           to={`/sejarah/${item.slug}`}
-          className="
-            mt-auto
-            flex
-            w-full
-            items-center
-            justify-center
-            gap-2
-            rounded-full
-            bg-black
-            px-4
-            py-2.5
-            text-xs
-            font-semibold
-            text-white
-            transition-all
-            duration-300
-            hover:bg-gray-800
-          "
+          className="mt-5 inline-flex w-fit items-center gap-1.5 border-b border-transparent pb-0.5 text-xs font-bold text-[#3542A5] transition group-hover:gap-2.5 group-hover:border-[#3542A5]"
         >
-
-          Baca Selengkapnya
-
-          <ArrowRight
-            size={15}
-            className="
-              transition-transform
-              group-hover:translate-x-1
-            "
-          />
-
+          Baca selengkapnya
+          <ArrowRight size={14} />
         </Link>
+      </div>
+    </article>
+  )
+}
 
+
+function SidebarHistoryCard({ item }) {
+  const images = Array.isArray(item.gambar)
+    ? item.gambar
+    : item.gambar
+      ? [item.gambar]
+      : []
+
+  const imageUrl =
+    images.length > 0
+      ? `${LARAVEL_URL}/storage/${images[0]}`
+      : null
+
+  return (
+    <Link to={`/sejarah/${item.slug}`} className="group flex gap-3">
+      <div className="h-16 w-20 shrink-0 overflow-hidden rounded-xl bg-slate-100">
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={item.judul}
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center text-[9px] text-slate-400">
+            No image
+          </div>
+        )}
       </div>
 
-    </article>
-
+      <div className="min-w-0">
+        <h4 className="line-clamp-2 text-xs font-bold leading-5 text-slate-800 transition group-hover:text-[#3542A5]">
+          {item.judul}
+        </h4>
+        {item.lokasi && (
+          <p className="mt-1 flex items-center gap-1 text-[10px] text-slate-400">
+            <MapPin size={10} />
+            <span className="truncate">{item.lokasi}</span>
+          </p>
+        )}
+      </div>
+    </Link>
   )
 }
 

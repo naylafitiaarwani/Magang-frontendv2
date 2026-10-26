@@ -101,7 +101,7 @@ export default function ExploreSection() {
   return (
     <section
       id="eksplorasi"
-      className="relative overflow-hidden bg-[#092F4A] py-20 lg:py-24"
+      className="relative overflow-hidden bg-[#092F4A] py-16 lg:py-20"
     >
 
       {/* ================= BACKGROUND ================= */}
@@ -123,7 +123,7 @@ export default function ExploreSection() {
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-6 lg:px-10">
 
-        <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-[300px_minmax(0,1fr)] lg:gap-12">
 
 
           {/* ================= LEFT ================= */}
@@ -132,13 +132,13 @@ export default function ExploreSection() {
 
             <div>
 
-              <h2 className="max-w-[320px] text-3xl font-bold leading-[1.15] text-white lg:text-[34px]">
+              <h2 className="max-w-[320px] text-3xl font-bold leading-[1.12] text-white lg:text-[32px]">
                 Banyak Tempat, Kuliner,
                 Sejarah dan Lainnya
                 untuk Dieksplor!
               </h2>
 
-              <p className="mt-6 max-w-[300px] text-sm leading-[1.65] text-gray-200">
+              <p className="mt-5 max-w-[300px] text-sm leading-[1.65] text-gray-200">
                 Jelajahi kekayaan Indramayu mulai dari
                 destinasi menarik, kuliner khas, hingga
                 UMKM dan budaya lokal. Semua yang kamu
@@ -148,7 +148,7 @@ export default function ExploreSection() {
 
               <Link
                 to="/wisata"
-                className="mt-7 inline-flex border border-white px-5 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#092F4A]"
+                className="mt-6 inline-flex border border-white px-5 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#092F4A]"
               >
                 Jelajahi Lainnya
               </Link>
@@ -259,17 +259,17 @@ export default function ExploreSection() {
     key={`${item.type}-${item.id}`}
     className="!h-auto"
   >
-    <div className="flex h-[510px] flex-col overflow-hidden bg-white shadow-lg">
+    <div className="flex h-[500px] flex-col overflow-hidden bg-white shadow-lg">
 
       {/* IMAGE */}
       <img
         src={getImage(item)}
         alt={item.nama || item.judul}
-        className="h-[250px] w-full shrink-0 object-cover"
+        className="h-[245px] w-full shrink-0 object-cover"
       />
 
       {/* CONTENT */}
-      <div className="flex h-[260px] flex-col p-5">
+      <div className="flex h-[255px] flex-col p-5">
 
         {/* CATEGORY */}
         <span className="text-[10px] font-semibold uppercase tracking-wider text-[#5968F2]">
