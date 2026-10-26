@@ -1,6 +1,6 @@
 # Magang - Frontend
 
-Frontend aplikasi Magang Contoh dibuat dengan React dan Vite. Aplikasi ini menampilkan informasi wisata, budaya, kuliner, sejarah, dan UMKM, serta menyediakan login, pemesanan tiket, dan halaman pengelola. Data dan autentikasi menggunakan API dari repository backend Laravel.
+Aplikasi ini menampilkan informasi wisata, budaya, kuliner, sejarah, dan UMKM, serta menyediakan login, pemesanan tiket, dan halaman pengelola. Data dan autentikasi menggunakan API dari repository backend Laravel.
 
 ## Persyaratan
 
